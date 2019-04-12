@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0q8y9vk" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.0.1">
+  <bpmn:process id="PrognozaPodlewania" name="Prognoza podlewania" isExecutable="true">
+    <bpmn:sequenceFlow id="SequenceFlow_111y0r7" sourceRef="StartEvent_1" targetRef="Task_16bsajq" />
+    <bpmn:endEvent id="EndEvent_12nhr1v">
+      <bpmn:incoming>SequenceFlow_0lu1dm3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0lu1dm3" sourceRef="Task_1rogwvw" targetRef="EndEvent_12nhr1v" />
+    <bpmn:serviceTask id="Task_1rogwvw" name="pokaz zmiennne JSON" camunda:type="external" camunda:topic="pokazDanePogodowe">
+      <bpmn:incoming>SequenceFlow_1q8f9vl</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0lu1dm3</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_111y0r7</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1q8f9vl" sourceRef="Task_0bwzqy8" targetRef="Task_1rogwvw" />
+    <bpmn:serviceTask id="Task_0bwzqy8" name="Pobierz Parametry" camunda:type="external" camunda:topic="pobierzParametry">
+      <bpmn:incoming>SequenceFlow_1osuxjf</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1q8f9vl</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1osuxjf" sourceRef="Task_16bsajq" targetRef="Task_0bwzqy8" />
+    <bpmn:serviceTask id="Task_16bsajq" name="Pokaż dane pogodowe" camunda:type="external" camunda:topic="pobierzDanePogodowe">
+      <bpmn:incoming>SequenceFlow_111y0r7</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1osuxjf</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="PrognozaPodlewania">
+      <bpmndi:BPMNEdge id="SequenceFlow_111y0r7_di" bpmnElement="SequenceFlow_111y0r7">
+        <di:waypoint x="215" y="121" />
+        <di:waypoint x="308" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_12nhr1v_di" bpmnElement="EndEvent_12nhr1v">
+        <dc:Bounds x="871" y="103" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0lu1dm3_di" bpmnElement="SequenceFlow_0lu1dm3">
+        <di:waypoint x="807" y="121" />
+        <di:waypoint x="871" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0ufj9gw_di" bpmnElement="Task_1rogwvw">
+        <dc:Bounds x="707" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1j1yiwh_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="103" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1q8f9vl_di" bpmnElement="SequenceFlow_1q8f9vl">
+        <di:waypoint x="648" y="121" />
+        <di:waypoint x="707" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_04bu9g8_di" bpmnElement="Task_0bwzqy8">
+        <dc:Bounds x="548" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1osuxjf_di" bpmnElement="SequenceFlow_1osuxjf">
+        <di:waypoint x="408" y="121" />
+        <di:waypoint x="548" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_1lzqfeg_di" bpmnElement="Task_16bsajq">
+        <dc:Bounds x="308" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
