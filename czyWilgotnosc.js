@@ -11,7 +11,7 @@ function zaokragl(n, k)
     return Math.round(n*factor)/factor;
 }
 
-client.subscribe("czyTemperatura", async function({ task, taskService }) { // nazwa musi być taka jak w aktywności pole Topic
+client.subscribe("czyWilgotnosc", async function({ task, taskService }) { // nazwa musi być taka jak w aktywności pole Topic
     const zmiennaJSON = task.variables.getAllTyped();
     danePogodowe = [];
     alert = [];
@@ -53,5 +53,5 @@ client.subscribe("czyTemperatura", async function({ task, taskService }) { // na
     const dP = new Variables();
     dP.set("alert", JSON.stringify(this.alert));
     await taskService.complete(task, dP);
-    console.log(logger.success("Komunikat z czyTemperatura poszedł!"));
+    console.log(logger.success("Komunikat z czyWilgotnosc poszedł!"));
 });
