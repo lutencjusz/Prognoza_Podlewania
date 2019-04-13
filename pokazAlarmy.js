@@ -1,7 +1,9 @@
 const { Client, logger } = require("camunda-external-task-client-js");
 const { Variables } = require("camunda-external-task-client-js");
 const plik = require("fs");
-const http = require('http');
+const express = require('express')
+const app = express()
+const port = 3000
 
 const config = { baseUrl: "http://localhost:8080/engine-rest", use: logger, asyncResponseTimeout:10000};
 const client = new Client(config);
@@ -28,11 +30,33 @@ client.subscribe("pokazAlarmy", async function({ task, taskService }) { // nazwa
     }
 });
 
-http.createServer(function (req, res) {
+// http.createServer(function (req, res) {
+//    plik.readFile('alarmy.json', function(err, data) {
+//        res.header("Access-Control-Allow-Origin", "*");
+//        res.writeHead(200, {'Content-Type': 'application/json'});
+//        res.write(data);
+ //       res.end();
+//        console.log("Przekazałem plik alarmy.json!")
+//    });
+//}).listen(8079);
+
+app.get('/', (request, res) => {
     plik.readFile('alarmy.json', function(err, data) {
-        res.writeHead(200, {'Content-Type': 'application/json'});
-        res.write(data);
-        res.end();
-        console.log("Przekazałem plik alarmy.json!")
+ //       res.header("Access-Control-Allow-Origin", "*");
+//        res.writeHead(200, {'Content-Type': 'application/json'});
+//        res.write(data);
+ //       res.end();
+        res.type('application/json');
+        res.setHeader('Access-Control-Allow-Origin', '*');      
+        res.send(data);
+        console.log("Przekazałem plik alarmy.json!");
     });
-}).listen(8079);
+})
+  
+app.listen(port, (err) => {
+  if (err) {
+    return console.log('something bad happened', err)
+  }
+  
+  console.log(`serwer jest uruchomiony na porcie ${port}`)
+})
