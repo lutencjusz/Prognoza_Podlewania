@@ -1,0 +1,308 @@
+[
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (7.72) < Min(10)Wilgotność (71) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-13 18:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (6.5) < Min(10)Wilgotność (71) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-13 21:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (5.38) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-14 00:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (3.8) < Min(10)Wilgotność (72) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-14 03:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (4.15) < Min(10)Wilgotność (72) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-14 06:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (8.24) < Min(10)Wilgotność (75) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-14 09:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Wilgotność większa od optymalnej!",
+    "opis": "Wilgotność (71) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "w3",
+    "data": "2019-04-14 12:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "",
+    "opis": "",
+    "status": true,
+    "klucz": "",
+    "data": "2019-04-14 15:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (7.61) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-14 18:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (4.94) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-14 21:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (3.02) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-15 00:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (0.96) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-15 03:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (2.7) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-15 06:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (7.71) < Min(10)Wilgotność (76) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-15 09:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (9.16) < Min(10)Wilgotność (72) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-15 12:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (9.49) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-15 15:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (5.97) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-15 18:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (2.81) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-15 21:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (0.5) < Min(10)Wilgotność (77) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-16 00:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt wysoka wilgotność!",
+    "opis": "Temperatura (-1.5) < Min(10)Wilgotność (86) > Max(85)",
+    "status": false,
+    "klucz": "t2w1",
+    "data": "2019-04-16 03:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (2.23) < Min(10)Wilgotność (75) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-16 06:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (7.85) < Min(10)Wilgotność (85) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-16 09:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Wilgotność większa od optymalnej!",
+    "opis": "Wilgotność (77) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "w3",
+    "data": "2019-04-16 12:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (8.19) < Min(10)Wilgotność (81) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-16 15:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt wysoka wilgotność!",
+    "opis": "Temperatura (6.65) < Min(10)Wilgotność (90) > Max(85)",
+    "status": false,
+    "klucz": "t2w1",
+    "data": "2019-04-16 18:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt wysoka wilgotność!",
+    "opis": "Temperatura (5.78) < Min(10)Wilgotność (92) > Max(85)",
+    "status": false,
+    "klucz": "t2w1",
+    "data": "2019-04-16 21:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt wysoka wilgotność!",
+    "opis": "Temperatura (5.45) < Min(10)Wilgotność (96) > Max(85)",
+    "status": false,
+    "klucz": "t2w1",
+    "data": "2019-04-17 00:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt wysoka wilgotność!",
+    "opis": "Temperatura (5.93) < Min(10)Wilgotność (95) > Max(85)",
+    "status": false,
+    "klucz": "t2w1",
+    "data": "2019-04-17 03:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt wysoka wilgotność!",
+    "opis": "Temperatura (8.62) < Min(10)Wilgotność (94) > Max(85)",
+    "status": false,
+    "klucz": "t2w1",
+    "data": "2019-04-17 06:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt wysoka wilgotność!",
+    "opis": "Wilgotność (93) > Max(85)",
+    "status": false,
+    "klucz": "w1",
+    "data": "2019-04-17 09:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Wilgotność większa od optymalnej!",
+    "opis": "Wilgotność (85) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "w3",
+    "data": "2019-04-17 12:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Wilgotność większa od optymalnej!",
+    "opis": "Wilgotność (72) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "w3",
+    "data": "2019-04-17 15:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "",
+    "opis": "",
+    "status": true,
+    "klucz": "",
+    "data": "2019-04-17 18:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (8.81) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-17 21:00:00"
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (5.92) < Min(10)Wilgotność (84) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-18 00:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt wysoka wilgotność!",
+    "opis": "Temperatura (4.68) < Min(10)Wilgotność (92) > Max(85)",
+    "status": false,
+    "klucz": "t2w1",
+    "data": "2019-04-18 03:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (9.48) < Min(10)Wilgotność (76) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "t2w3",
+    "data": "2019-04-18 06:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "Wilgotność większa od optymalnej!",
+    "opis": "Wilgotność (79) > Opt(70). Nie uruchamiam pompki rano!",
+    "status": false,
+    "klucz": "w3",
+    "data": "2019-04-18 09:00:00",
+    "czyUruchomicK1": false
+  },
+  {
+    "naglowek": "",
+    "opis": "",
+    "status": true,
+    "klucz": "",
+    "data": "2019-04-18 12:00:00"
+  },
+  {
+    "naglowek": "",
+    "opis": "",
+    "status": true,
+    "klucz": "",
+    "data": "2019-04-18 15:00:00"
+  }
+]
