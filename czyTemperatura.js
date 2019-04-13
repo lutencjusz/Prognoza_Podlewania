@@ -16,7 +16,17 @@ client.subscribe("czyTemperatura", async function({ task, taskService }) { // na
     tablica = [];
     alert = [];
     this.tablica = zmiennaJSON['danePogodowe']['value']['list'];
+    if (this.tablica == null){
+        console.log("Błąd otwierania danych pogodowych");
+        await taskService.handleBpmnError(task, "bladODP");
+        return;   
+    }
     const parametry = zmiennaJSON['parametry']['value'];
+    if (parametry == null){
+        console.log("Błąd otwierania parametrów");
+        await taskService.handleBpmnError(task, "bladODP");
+        return;   
+    }
     const min = parametry['temp_min'];
     const max = parametry['temp_max'];
 
@@ -26,20 +36,27 @@ client.subscribe("czyTemperatura", async function({ task, taskService }) { // na
         if (t > max) {
             alert.push({
                 naglowek:"Zbyt wysoka temperatura!", 
-                opis:"Temperatura (" + t + ") > Max(" + max,
+                opis:"Temperatura (" + t + ") > Max(" + max + ")",
                 status:false, 
                 klucz:"t1",
                 data: element['dt_txt']
             });
-        } 
-        if (t < min) {
+        } else if (t < min) {
             alert.push({
                 naglowek:"Zbyt niska temperatura!", 
-                opis:"Temperatura (" + t + ") < Min(" + min,
+                opis:"Temperatura (" + t + ") < Min(" + min + ")",
                 status:false, 
                 klucz:"t2",
                 data: element['dt_txt']
             });
+        } else {
+            alert.push({
+                naglowek:"", 
+                opis:"",
+                status:true, 
+                klucz:"t3",
+                data: element['dt_txt']
+            });            
         }
     });
     // console.log(this.tablica[0]['dt_txt']);
