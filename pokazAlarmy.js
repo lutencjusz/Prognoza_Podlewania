@@ -30,33 +30,29 @@ client.subscribe("pokazAlarmy", async function({ task, taskService }) { // nazwa
     }
 });
 
-// http.createServer(function (req, res) {
-//    plik.readFile('alarmy.json', function(err, data) {
-//        res.header("Access-Control-Allow-Origin", "*");
-//        res.writeHead(200, {'Content-Type': 'application/json'});
-//        res.write(data);
- //       res.end();
-//        console.log("Przekazałem plik alarmy.json!")
-//    });
-//}).listen(8079);
+plik.access('alarmy.json', plik.F_OK, (err) => { // sprawdzenie, czy plik istnieje
+    if (err) {
+      console.log ('pokazAlarmy: coś poszło nie tak z otwieraniem pliku alarmy.json');
+      console.error(err)
+      return
+    }
+    app.get('/', (request, res) => {
+        plik.readFile('alarmy.json', function(err, data) {
+            res.type('application/json'); // ustawienie nagłówka
+            res.setHeader('Access-Control-Allow-Origin', '*');
+            // ustawienie nagłówka niezbędne do RESTFul
+            res.send(data);
+            console.log("Przekazałem plik alarmy.json!");
+        });
+    })
+      
+    app.listen(port, (err) => {
+      if (err) {
+        return console.log('serwer RESTFul został zatrzymany', err)
+      }
+      
+      console.log(`serwer jest uruchomiony na porcie ${port}`)
+    })
 
-app.get('/', (request, res) => {
-    plik.readFile('alarmy.json', function(err, data) {
- //       res.header("Access-Control-Allow-Origin", "*");
-//        res.writeHead(200, {'Content-Type': 'application/json'});
-//        res.write(data);
- //       res.end();
-        res.type('application/json');
-        res.setHeader('Access-Control-Allow-Origin', '*');      
-        res.send(data);
-        console.log("Przekazałem plik alarmy.json!");
-    });
 })
-  
-app.listen(port, (err) => {
-  if (err) {
-    return console.log('something bad happened', err)
-  }
-  
-  console.log(`serwer jest uruchomiony na porcie ${port}`)
-})
+
