@@ -27,7 +27,7 @@ client.subscribe("ustawAlertyPocz", async function({ task, taskService }) { // n
     });
 
     const dP = new Variables();
-    dP.set("alert", JSON.stringify(alert));
+    dP.set("alert", alert);
     await taskService.complete(task, dP);
     console.log(logger.success("Komunikat z ustawAlertyPocz poszedł!"));
 });

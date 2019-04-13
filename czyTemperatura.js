@@ -16,7 +16,7 @@ client.subscribe("czyTemperatura", async function({ task, taskService }) { // na
     danePogodowe = [];
     alert = [];
     this.danePogodowe = zmiennaJSON['danePogodowe']['value']['list']; // pobiera tablice zmiennych pogodowych
-    this.alert = JSON.parse(zmiennaJSON['alert']['value']); 
+    this.alert = zmiennaJSON['alert']['value'];
     // pobiera tablice alertów, potrzebny parse bo było stringify
     if (this.danePogodowe == null){ // błąd bladODP, gdy brak danych pogodowych 
         console.log("Błąd otwierania danych pogodowych");
@@ -51,7 +51,7 @@ client.subscribe("czyTemperatura", async function({ task, taskService }) { // na
     });
     // console.log(this.tablica[0]['dt_txt']);
     const dP = new Variables();
-    dP.set("alert", JSON.stringify(this.alert));
+    dP.set("alert", this.alert);
     await taskService.complete(task, dP);
     console.log(logger.success("Komunikat z czyTemperatura poszedł!"));
 });
