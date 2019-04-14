@@ -30,11 +30,18 @@ client.subscribe("czyWilgotnosc", async function({ task, taskService }) { // naz
 
     this.danePogodowe.forEach((element, i) => {
         let w = element['main']['humidity']; // wyciąganie wilgotności z JSON
+        let chmury = element['clouds']['all'];
+        let wiatr = element['wind']['speed'];
+        let dsk = element['weather'][0]['description'];
+
         this.alert[i].wilgotnosc = w;
+        this.alert[i].zachmurzenie = chmury;
+        this.alert[i].wiatr = wiatr;
+        this.alert[i].dsk = dsk;
         console.log('Data: ' + element['dt_txt'] + ' wilgotność: ' + w);
-        if (w > max) {
-            this.alert[i].naglowek = "Zbyt wysoka wilgotność!";
-            this.alert[i].opis = this.alert[i].opis + "Wilgotność (" + w + ") > Max(" + max + ")";
+        if (w > max && chmury > 20) {
+            this.alert[i].naglowek = "Będzie padać!";
+            this.alert[i].opis = this.alert[i].opis + "Wilgotność (" + w + ") > Max(" + max + ") chmury (" + chmury + "%)";
             this.alert[i].status = false;
             this.alert[i].klucz = this.alert[i].klucz + "w1";
             this.alert[i].data = element['dt_txt'];
@@ -46,11 +53,11 @@ client.subscribe("czyWilgotnosc", async function({ task, taskService }) { // naz
             this.alert[i].klucz = this.alert[i].klucz + "w2";
             this.alert[i].data = element['dt_txt'];
             this.alert[i].czyUruchomicK1 = true;
-        } else if (w > opt){
+        } else if (w > opt && chmury > 20){
             if (this.alert[i].naglowek == ''){
                 this.alert[i].naglowek = "Wilgotność większa od optymalnej!"; 
             }
-            this.alert[i].opis = this.alert[i].opis + "Wilgotność (" + w + ") > Opt(" + opt + "). Nie uruchamiam pompki rano!";
+            this.alert[i].opis = this.alert[i].opis + "Wilgotność (" + w + ") > Opt(" + opt + "), chmury (" + chmury + "%). Nie uruchamiam pompki rano!";
             this.alert[i].status = false;
             this.alert[i].klucz = this.alert[i].klucz + "w3";
             this.alert[i].data = element['dt_txt'];

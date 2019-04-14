@@ -20,11 +20,11 @@ https.get('https://api.openweathermap.org/data/2.5/forecast?q=Warsaw,pl&APPID=6e
     client.subscribe("pobierzPrognozePogody", async function({ task, taskService }) { // nazwa musi być taka jak w aktywności pole Topic
       const dP = new Variables();
       dP.set("danePogodowe", JSON.parse(data));
-      //dP.set("dataPobrania", { Data: new Date()});
       console.log(dP.getAll());
 
       await taskService.complete(task, dP);
       console.log(logger.success("Komunikat z utworzJSON poszedł!"));
+      resp.destroy();
     });
   });
 
