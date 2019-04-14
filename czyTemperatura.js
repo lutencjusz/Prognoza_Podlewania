@@ -34,6 +34,7 @@ client.subscribe("czyTemperatura", async function({ task, taskService }) { // na
 
     this.danePogodowe.forEach((element, i) => {
         let t = zaokragl(element['main']['temp'] - 272.15, 2); // wyciąganie temperatury C z JSON
+        this.alert[i].temp = t;
         console.log('Data: ' + element['dt_txt'] + ' temp: ' + t);
         if (t > max) {
             this.alert[i].naglowek = "Zbyt wysoka temperatura!";

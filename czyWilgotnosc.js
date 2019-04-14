@@ -30,6 +30,7 @@ client.subscribe("czyWilgotnosc", async function({ task, taskService }) { // naz
 
     this.danePogodowe.forEach((element, i) => {
         let w = element['main']['humidity']; // wyciąganie wilgotności z JSON
+        this.alert[i].wilgotnosc = w;
         console.log('Data: ' + element['dt_txt'] + ' wilgotność: ' + w);
         if (w > max) {
             this.alert[i].naglowek = "Zbyt wysoka wilgotność!";

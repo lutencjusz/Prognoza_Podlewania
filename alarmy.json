@@ -1,49 +1,12 @@
 [
   {
-    "naglowek": "Zbyt niska temperatura!",
-    "opis": "Temperatura (7.72) < Min(10)Wilgotność (71) > Opt(70). Nie uruchamiam pompki rano!",
+    "naglowek": "Wilgotność większa od optymalnej!",
+    "opis": "Wilgotność (75) > Opt(70). Nie uruchamiam pompki rano!",
     "status": false,
-    "klucz": "t2w3",
-    "data": "2019-04-13 18:00:00",
-    "czyUruchomicK1": false
-  },
-  {
-    "naglowek": "Zbyt niska temperatura!",
-    "opis": "Temperatura (6.5) < Min(10)Wilgotność (71) > Opt(70). Nie uruchamiam pompki rano!",
-    "status": false,
-    "klucz": "t2w3",
-    "data": "2019-04-13 21:00:00",
-    "czyUruchomicK1": false
-  },
-  {
-    "naglowek": "Zbyt niska temperatura!",
-    "opis": "Temperatura (5.38) < Min(10)",
-    "status": false,
-    "klucz": "t2",
-    "data": "2019-04-14 00:00:00"
-  },
-  {
-    "naglowek": "Zbyt niska temperatura!",
-    "opis": "Temperatura (3.8) < Min(10)Wilgotność (72) > Opt(70). Nie uruchamiam pompki rano!",
-    "status": false,
-    "klucz": "t2w3",
-    "data": "2019-04-14 03:00:00",
-    "czyUruchomicK1": false
-  },
-  {
-    "naglowek": "Zbyt niska temperatura!",
-    "opis": "Temperatura (4.15) < Min(10)Wilgotność (72) > Opt(70). Nie uruchamiam pompki rano!",
-    "status": false,
-    "klucz": "t2w3",
-    "data": "2019-04-14 06:00:00",
-    "czyUruchomicK1": false
-  },
-  {
-    "naglowek": "Zbyt niska temperatura!",
-    "opis": "Temperatura (8.24) < Min(10)Wilgotność (75) > Opt(70). Nie uruchamiam pompki rano!",
-    "status": false,
-    "klucz": "t2w3",
+    "klucz": "w3",
     "data": "2019-04-14 09:00:00",
+    "temp": 10.19,
+    "wilgotnosc": 75,
     "czyUruchomicK1": false
   },
   {
@@ -52,6 +15,8 @@
     "status": false,
     "klucz": "w3",
     "data": "2019-04-14 12:00:00",
+    "temp": 12.5,
+    "wilgotnosc": 71,
     "czyUruchomicK1": false
   },
   {
@@ -59,42 +24,54 @@
     "opis": "",
     "status": true,
     "klucz": "",
-    "data": "2019-04-14 15:00:00"
+    "data": "2019-04-14 15:00:00",
+    "temp": 12.25,
+    "wilgotnosc": 63
   },
   {
     "naglowek": "Zbyt niska temperatura!",
-    "opis": "Temperatura (7.61) < Min(10)",
+    "opis": "Temperatura (8.1) < Min(10)",
     "status": false,
     "klucz": "t2",
-    "data": "2019-04-14 18:00:00"
+    "data": "2019-04-14 18:00:00",
+    "temp": 8.1,
+    "wilgotnosc": 58
   },
   {
     "naglowek": "Zbyt niska temperatura!",
     "opis": "Temperatura (4.94) < Min(10)",
     "status": false,
     "klucz": "t2",
-    "data": "2019-04-14 21:00:00"
+    "data": "2019-04-14 21:00:00",
+    "temp": 4.94,
+    "wilgotnosc": 62
   },
   {
     "naglowek": "Zbyt niska temperatura!",
     "opis": "Temperatura (3.02) < Min(10)",
     "status": false,
     "klucz": "t2",
-    "data": "2019-04-15 00:00:00"
+    "data": "2019-04-15 00:00:00",
+    "temp": 3.02,
+    "wilgotnosc": 62
   },
   {
     "naglowek": "Zbyt niska temperatura!",
     "opis": "Temperatura (0.96) < Min(10)",
     "status": false,
     "klucz": "t2",
-    "data": "2019-04-15 03:00:00"
+    "data": "2019-04-15 03:00:00",
+    "temp": 0.96,
+    "wilgotnosc": 64
   },
   {
     "naglowek": "Zbyt niska temperatura!",
     "opis": "Temperatura (2.7) < Min(10)",
     "status": false,
     "klucz": "t2",
-    "data": "2019-04-15 06:00:00"
+    "data": "2019-04-15 06:00:00",
+    "temp": 2.7,
+    "wilgotnosc": 68
   },
   {
     "naglowek": "Zbyt niska temperatura!",
@@ -102,6 +79,8 @@
     "status": false,
     "klucz": "t2w3",
     "data": "2019-04-15 09:00:00",
+    "temp": 7.71,
+    "wilgotnosc": 76,
     "czyUruchomicK1": false
   },
   {
@@ -110,6 +89,8 @@
     "status": false,
     "klucz": "t2w3",
     "data": "2019-04-15 12:00:00",
+    "temp": 9.16,
+    "wilgotnosc": 72,
     "czyUruchomicK1": false
   },
   {
@@ -117,21 +98,27 @@
     "opis": "Temperatura (9.49) < Min(10)",
     "status": false,
     "klucz": "t2",
-    "data": "2019-04-15 15:00:00"
+    "data": "2019-04-15 15:00:00",
+    "temp": 9.49,
+    "wilgotnosc": 64
   },
   {
     "naglowek": "Zbyt niska temperatura!",
     "opis": "Temperatura (5.97) < Min(10)",
     "status": false,
     "klucz": "t2",
-    "data": "2019-04-15 18:00:00"
+    "data": "2019-04-15 18:00:00",
+    "temp": 5.97,
+    "wilgotnosc": 60
   },
   {
     "naglowek": "Zbyt niska temperatura!",
     "opis": "Temperatura (2.81) < Min(10)",
     "status": false,
     "klucz": "t2",
-    "data": "2019-04-15 21:00:00"
+    "data": "2019-04-15 21:00:00",
+    "temp": 2.81,
+    "wilgotnosc": 65
   },
   {
     "naglowek": "Zbyt niska temperatura!",
@@ -139,6 +126,8 @@
     "status": false,
     "klucz": "t2w3",
     "data": "2019-04-16 00:00:00",
+    "temp": 0.5,
+    "wilgotnosc": 77,
     "czyUruchomicK1": false
   },
   {
@@ -147,6 +136,8 @@
     "status": false,
     "klucz": "t2w1",
     "data": "2019-04-16 03:00:00",
+    "temp": -1.5,
+    "wilgotnosc": 86,
     "czyUruchomicK1": false
   },
   {
@@ -155,6 +146,8 @@
     "status": false,
     "klucz": "t2w3",
     "data": "2019-04-16 06:00:00",
+    "temp": 2.23,
+    "wilgotnosc": 75,
     "czyUruchomicK1": false
   },
   {
@@ -163,6 +156,8 @@
     "status": false,
     "klucz": "t2w3",
     "data": "2019-04-16 09:00:00",
+    "temp": 7.85,
+    "wilgotnosc": 85,
     "czyUruchomicK1": false
   },
   {
@@ -171,6 +166,8 @@
     "status": false,
     "klucz": "w3",
     "data": "2019-04-16 12:00:00",
+    "temp": 10.07,
+    "wilgotnosc": 77,
     "czyUruchomicK1": false
   },
   {
@@ -179,6 +176,8 @@
     "status": false,
     "klucz": "t2w3",
     "data": "2019-04-16 15:00:00",
+    "temp": 8.19,
+    "wilgotnosc": 81,
     "czyUruchomicK1": false
   },
   {
@@ -187,6 +186,8 @@
     "status": false,
     "klucz": "t2w1",
     "data": "2019-04-16 18:00:00",
+    "temp": 6.65,
+    "wilgotnosc": 90,
     "czyUruchomicK1": false
   },
   {
@@ -195,6 +196,8 @@
     "status": false,
     "klucz": "t2w1",
     "data": "2019-04-16 21:00:00",
+    "temp": 5.78,
+    "wilgotnosc": 92,
     "czyUruchomicK1": false
   },
   {
@@ -203,6 +206,8 @@
     "status": false,
     "klucz": "t2w1",
     "data": "2019-04-17 00:00:00",
+    "temp": 5.45,
+    "wilgotnosc": 96,
     "czyUruchomicK1": false
   },
   {
@@ -211,6 +216,8 @@
     "status": false,
     "klucz": "t2w1",
     "data": "2019-04-17 03:00:00",
+    "temp": 5.93,
+    "wilgotnosc": 95,
     "czyUruchomicK1": false
   },
   {
@@ -219,6 +226,8 @@
     "status": false,
     "klucz": "t2w1",
     "data": "2019-04-17 06:00:00",
+    "temp": 8.62,
+    "wilgotnosc": 94,
     "czyUruchomicK1": false
   },
   {
@@ -227,6 +236,8 @@
     "status": false,
     "klucz": "w1",
     "data": "2019-04-17 09:00:00",
+    "temp": 11.99,
+    "wilgotnosc": 93,
     "czyUruchomicK1": false
   },
   {
@@ -235,6 +246,8 @@
     "status": false,
     "klucz": "w3",
     "data": "2019-04-17 12:00:00",
+    "temp": 15.39,
+    "wilgotnosc": 85,
     "czyUruchomicK1": false
   },
   {
@@ -243,6 +256,8 @@
     "status": false,
     "klucz": "w3",
     "data": "2019-04-17 15:00:00",
+    "temp": 16.09,
+    "wilgotnosc": 72,
     "czyUruchomicK1": false
   },
   {
@@ -250,14 +265,18 @@
     "opis": "",
     "status": true,
     "klucz": "",
-    "data": "2019-04-17 18:00:00"
+    "data": "2019-04-17 18:00:00",
+    "temp": 12.98,
+    "wilgotnosc": 65
   },
   {
     "naglowek": "Zbyt niska temperatura!",
     "opis": "Temperatura (8.81) < Min(10)",
     "status": false,
     "klucz": "t2",
-    "data": "2019-04-17 21:00:00"
+    "data": "2019-04-17 21:00:00",
+    "temp": 8.81,
+    "wilgotnosc": 69
   },
   {
     "naglowek": "Zbyt niska temperatura!",
@@ -265,6 +284,8 @@
     "status": false,
     "klucz": "t2w3",
     "data": "2019-04-18 00:00:00",
+    "temp": 5.92,
+    "wilgotnosc": 84,
     "czyUruchomicK1": false
   },
   {
@@ -273,6 +294,8 @@
     "status": false,
     "klucz": "t2w1",
     "data": "2019-04-18 03:00:00",
+    "temp": 4.68,
+    "wilgotnosc": 92,
     "czyUruchomicK1": false
   },
   {
@@ -281,6 +304,8 @@
     "status": false,
     "klucz": "t2w3",
     "data": "2019-04-18 06:00:00",
+    "temp": 9.48,
+    "wilgotnosc": 76,
     "czyUruchomicK1": false
   },
   {
@@ -289,6 +314,8 @@
     "status": false,
     "klucz": "w3",
     "data": "2019-04-18 09:00:00",
+    "temp": 15.96,
+    "wilgotnosc": 79,
     "czyUruchomicK1": false
   },
   {
@@ -296,13 +323,35 @@
     "opis": "",
     "status": true,
     "klucz": "",
-    "data": "2019-04-18 12:00:00"
+    "data": "2019-04-18 12:00:00",
+    "temp": 17.41,
+    "wilgotnosc": 69
   },
   {
     "naglowek": "",
     "opis": "",
     "status": true,
     "klucz": "",
-    "data": "2019-04-18 15:00:00"
+    "data": "2019-04-18 15:00:00",
+    "temp": 17.33,
+    "wilgotnosc": 61
+  },
+  {
+    "naglowek": "",
+    "opis": "",
+    "status": true,
+    "klucz": "",
+    "data": "2019-04-18 18:00:00",
+    "temp": 12.9,
+    "wilgotnosc": 57
+  },
+  {
+    "naglowek": "Zbyt niska temperatura!",
+    "opis": "Temperatura (8.64) < Min(10)",
+    "status": false,
+    "klucz": "t2",
+    "data": "2019-04-18 21:00:00",
+    "temp": 8.64,
+    "wilgotnosc": 68
   }
 ]

@@ -45,6 +45,16 @@ plik.access('alarmy.json', plik.F_OK, (err) => { // sprawdzenie, czy plik istnie
             console.log("Przekazałem plik alarmy.json!");
         });
     })
+
+    app.get('/parametry/', (request, res) => {
+        plik.readFile('parametry.json', function(err, data) {
+            res.type('application/json'); // ustawienie nagłówka
+            res.setHeader('Access-Control-Allow-Origin', '*');
+            // ustawienie nagłówka niezbędne do RESTFul
+            res.send(data);
+            console.log("Przekazałem plik parametry.json!");
+        });
+    })
       
     app.listen(port, (err) => {
       if (err) {
