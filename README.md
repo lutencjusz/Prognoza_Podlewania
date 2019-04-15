@@ -1,13 +1,13 @@
 # Prognoza_Podlewania
 prediction of watering plant based on Camunda and node.js
 
-Project wymaga silnika BPNM Camunda i środowiska node.js w którym są napisane mikroserwisy. 
-W celu połaczenia Camunda z node.js wykorzystywana jest biblioteka [camunda-external-task-client-js](https://github.com/camunda/camunda-external-task-client-js)
+The project requires a Camunda BPNM engine and a node.js environment in which microservices are written.
+In order to connect Camunda with node.js the [camunda-external-task-client-js] (https://github.com/camunda/camunda-external-task-client-js) library is used.
 
-# Struktura mikroserviców
-Wszystkie microserwisy są w katalogu głównym, ich nazwy są bezpośrednio powiązane z czynnosciami na diagramach BPMN:
+# Structure of microservices
+All microservices are in the Prognoza_Podlewania directory, their names are directly linked to the activities in the BPMN diagrams:
 
-# Standardowy interfejs mikroserviców
+# Standard interfaces of microservices
 ```
 ...
 const { Client, logger } = require("camunda-external-task-client-js");
