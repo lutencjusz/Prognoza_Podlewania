@@ -15,7 +15,7 @@ const { Variables } = require("camunda-external-task-client-js");
 const config = { baseUrl: "http://localhost:8080/engine-rest", use: logger, asyncResponseTimeout:10000};
 const client = new Client(config);
 ...
-https.get('https://api.openweathermap.org/data/2.5/forecast?q=Warsaw,pl&APPID=6e4f748efd51cdf7bdc15e6c9710fda8', (resp) => {
+https.get('https://api.openweathermap.org/data/2.5/forecast?q=Warsaw,pl&APPID=<your key>', (resp) => {
 ...
   resp.on('data', (chunk) => {
     data += chunk;
