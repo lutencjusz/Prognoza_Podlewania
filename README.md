@@ -7,6 +7,7 @@ W celu połaczenia Camunda z node.js wykorzystywana jest biblioteka [camunda-ext
 # Struktura mikroserviców
 Wszystkie microserwisy są w katalogu głównym, ich nazwy są bezpośrednio powiązane z czynnosciami na diagramach BPMN:
 
+# Standardowy interfejs mikroserviców
 ```
 ...
 const { Client, logger } = require("camunda-external-task-client-js");
