@@ -35,25 +35,35 @@ plik.access('alarmy.json', plik.F_OK, (err) => { // sprawdzenie, czy plik istnie
       console.error(err)
       return
     }
-    app.get('/', (request, res) => {
-        plik.readFile('alarmy.json', function(err, data) {
-            res.type('application/json'); // ustawienie nagłówka
-            res.setHeader('Access-Control-Allow-Origin', '*');
-            // ustawienie nagłówka niezbędne do RESTFul
-            res.send(data);
-            console.log("Przekazałem plik alarmy.json!");
-        });
-    })
+    try{
+        app.get('/', (request, res) => {
+            plik.readFile('alarmy.json', function(err, data) {
+                res.type('application/json'); // ustawienie nagłówka
+                res.setHeader('Access-Control-Allow-Origin', '*');
+                // ustawienie nagłówka niezbędne do RESTFul
+                res.send(data);
+                console.log("Przekazałem plik alarmy.json!");
+            });
+        })
+    } catch (e) {
+        console.log("Błąd otwierania alertów");
+        console.error(e);    
+    }
 
-    app.get('/parametry/', (request, res) => {
-        plik.readFile('parametry.json', function(err, data) {
-            res.type('application/json'); // ustawienie nagłówka
-            res.setHeader('Access-Control-Allow-Origin', '*');
-            // ustawienie nagłówka niezbędne do RESTFul
-            res.send(data);
-            console.log("Przekazałem plik parametry.json!");
-        });
-    })
+    try{
+        app.get('/parametry/', (request, res) => {
+            plik.readFile('parametry.json', function(err, data) {
+                res.type('application/json'); // ustawienie nagłówka
+                res.setHeader('Access-Control-Allow-Origin', '*');
+                // ustawienie nagłówka niezbędne do RESTFul
+                res.send(data);
+                console.log("Przekazałem plik parametry.json!");
+            });
+        })
+    } catch (e) {
+        console.log("Błąd otwierania alertów");
+        console.error(e);
+    }
       
     app.listen(port, (err) => {
       if (err) {

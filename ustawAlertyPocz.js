@@ -22,7 +22,8 @@ client.subscribe("ustawAlertyPocz", async function({ task, taskService }) { // n
             opis:"",
             status:true, 
             klucz:"",
-            data: element['dt_txt']
+            data: element['dt_txt'],
+            poraPodlewania:false //ustawnienie na potrzeby czyKalendarz
         });  
     });
 

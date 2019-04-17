@@ -7,5 +7,6 @@
     "humidityMin":1,
     "humidityOpt":60,
     "temp_max":30,
-    "temp_min":10
+    "temp_min":10,
+    "mozliwyCzasNaPodlewanie":3
 }
