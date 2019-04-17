@@ -1,5 +1,4 @@
 const { Client, logger } = require("camunda-external-task-client-js");
-const { Variables } = require("camunda-external-task-client-js");
 const plik = require("fs");
 const express = require('express')
 const app = express()
