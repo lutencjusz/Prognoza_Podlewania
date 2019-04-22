@@ -8,7 +8,7 @@ const client = new Client(config);
 console.log('Jest ok')
 // aktualny zapis - https://api.openweathermap.org/data/2.5/weather?q=Warsaw,pl&APPID=6e4f748efd51cdf7bdc15e6c9710fda8
 // prognoza - https://api.openweathermap.org/data/2.5/forecast?q=Warsaw,pl&APPID=6e4f748efd51cdf7bdc15e6c9710fda8
-https.get('https://api.openweathermap.org/data/2.5/forecast?q=Warsaw,pl&APPID=6e4f748efd51cdf7bdc15e6c9710fda8', (resp) => {
+https.get('https://api.openweathermap.org/data/2.5/forecast/hourly?q=Warsaw,pl&APPID=6e4f748efd51cdf7bdc15e6c9710fda8', (resp) => {
   let data = '';
 
   resp.on('data', (chunk) => {
