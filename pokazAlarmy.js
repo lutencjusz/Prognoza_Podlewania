@@ -83,22 +83,22 @@ fs.access('parametry.json', fs.F_OK, (err) => { // sprawdzenie, czy plik istniej
 app.post('/zmianaParametrow', (request, res) => {
     console.log ('przyszła zmiana parametrów');
     try {
-        fs.writeFileSync("test.json", JSON.stringify(request.body, null, 2));
+        fs.writeFileSync("parametry.json", JSON.stringify(request.body, null, 2));
     } catch(err) {
         return console.error(err);
     }
-    console.log("test.json został zapisany!");
+    console.log("parametry.json został zapisany!");
     res.end('{"status": "OK"}');
 });
 
 app.post('/zmianaKalendarza', (request, res) => {
     console.log ('przyszła zmiana kalendarza');
     try {
-        fs.writeFileSync("testK.json", JSON.stringify(request.body, null, 2));
+        fs.writeFileSync("kalendarz.json", JSON.stringify(request.body, null, 2));
     } catch(err) {
         return console.error(err);
     }
-    console.log("testK.json został zapisany!");
+    console.log("kalendarz.json został zapisany!");
     res.end('{"status": "OK"}');
 })
 
