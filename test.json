@@ -1,0 +1,12 @@
+{
+  "VcMax": 4,
+  "VcMin": 2,
+  "VpMax": 11,
+  "VpMin": 9,
+  "humidityMax": 85,
+  "humidityMin": 2,
+  "humidityOpt": 70,
+  "temp_min": 10,
+  "temp_max": 30,
+  "mozliwyCzasNaPodlewanie": 2
+}
