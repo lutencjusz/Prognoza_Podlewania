@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const cors = require('cors'); // trzeba zainstalować pakiet, żeby POST działało z angularem
 const app = express()
 const port = 3000
+const http = require('http');
+const querystring = require('querystring');
 
 const config = { baseUrl: "http://localhost:8080/engine-rest", use: logger, asyncResponseTimeout:10000};
 const client = new Client(config);
@@ -33,6 +35,37 @@ client.subscribe("pokazAlarmy", async function({ task, taskService }) { // nazwa
         console.log(logger.success("pokazAlarmy został zakończony!"));
     }
 });
+
+function PostCode(p, codestring) {
+  // Build the post string from an object
+  // var post_data = querystring.stringify(codestring);
+  var post_data = codestring;
+
+  // An object of options to indicate where to post to
+  var post_options = {
+      host: '192.168.0.15',
+      port: '80',
+      path: p,
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Content-Length': Buffer.byteLength(post_data)
+      }
+  };
+
+  // Set up the request
+  var post_req = http.request(post_options, function(res) {
+      res.setEncoding('utf8');
+      res.on('data', function (chunk) {
+          console.log('Response: ' + chunk);
+      });
+  });
+
+  // post the data
+  post_req.write(post_data);
+  post_req.end();
+
+}
 
 fs.access('alarmy.json', fs.F_OK, (err) => { // sprawdzenie, czy plik istnieje
     if (err) {
@@ -80,6 +113,12 @@ fs.access('parametry.json', fs.F_OK, (err) => { // sprawdzenie, czy plik istniej
 
 })
 
+app.post('/zmianaUstawienia', (request, res) => {
+    console.log ('przyszła zmiana ustawienia');
+    res.end('{"status": "OK"}');
+    PostCode('/zapiszUstawieniaZ', JSON.stringify(request.body, null, 2));
+});
+
 app.post('/zmianaParametrow', (request, res) => {
     console.log ('przyszła zmiana parametrów');
     try {
@@ -89,6 +128,7 @@ app.post('/zmianaParametrow', (request, res) => {
     }
     console.log("parametry.json został zapisany!");
     res.end('{"status": "OK"}');
+    PostCode('/zapiszParametryCz', JSON.stringify(request.body, null, 2));
 });
 
 app.post('/zmianaKalendarza', (request, res) => {
@@ -100,6 +140,7 @@ app.post('/zmianaKalendarza', (request, res) => {
     }
     console.log("kalendarz.json został zapisany!");
     res.end('{"status": "OK"}');
+    PostCode('/zapiszKalendarz', JSON.stringify(request.body, null, 2));
 })
 
 app.listen(port, (err) => {
