@@ -5,7 +5,7 @@
   "VpMin": 9,
   "humidityMax": 85,
   "humidityMin": 2,
-  "humidityOpt": 70,
+  "humidityOpt": 65,
   "temp_min": 10,
   "temp_max": 30,
   "mozliwyCzasNaPodlewanie": 2
