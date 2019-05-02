@@ -1,9 +1,9 @@
 {
   "VcMax": 4,
   "VcMin": 2,
-  "VpMax": 11,
+  "VpMax": 16,
   "VpMin": 9,
-  "humidityMax": 85,
+  "humidityMax": 80,
   "humidityMin": 2,
   "humidityOpt": 65,
   "temp_min": 10,

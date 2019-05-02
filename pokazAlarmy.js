@@ -16,6 +16,11 @@ app.use(cors()); // użycie dla wszystkich funkcji w express
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+fs.readFile('ustawieniaZ.json', function(err, data) {
+    ip = JSON.parse(data).ip;
+    console.log("Pobrałem IP: %s", ip);
+});
+
 client.subscribe("pokazAlarmy", async function({ task, taskService }) { // nazwa musi być taka jak w aktywności pole Topic
     const zmiennaJSON = task.variables.getAllTyped();
     alert = [];
@@ -43,7 +48,9 @@ function PostCode(p, codestring) {
 
   // An object of options to indicate where to post to
   var post_options = {
-      host: '192.168.0.15',
+      // host: '192.168.0.15',
+      // host: '192.168.43.176',
+      host: ip,
       port: '80',
       path: p,
       method: 'POST',
@@ -107,7 +114,7 @@ fs.access('parametry.json', fs.F_OK, (err) => { // sprawdzenie, czy plik istniej
             });
         })
     } catch (e) {
-        console.log("Błąd otwierania alertów");
+        console.log("Błąd otwierania parametrow");
         console.error(e);
     }
 
@@ -115,6 +122,11 @@ fs.access('parametry.json', fs.F_OK, (err) => { // sprawdzenie, czy plik istniej
 
 app.post('/zmianaUstawienia', (request, res) => {
     console.log ('przyszła zmiana ustawienia');
+    try {
+        fs.writeFileSync("ustawieniaZ.json", '{\n"ip":' + JSON.stringify(request.body.ip, null, 2)+'\n}');
+    } catch(err) {
+        return console.error(err);
+    }
     res.end('{"status": "OK"}');
     PostCode('/zapiszUstawieniaZ', JSON.stringify(request.body, null, 2));
 });
