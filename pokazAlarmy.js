@@ -167,6 +167,18 @@ app.post('/zmianaKomentarze', (request, res) => {
     PostCode('/zapiszKomentarze', JSON.stringify(request.body, null, 2));
 })
 
+app.post('/zmianaKomentarzeM', (request, res) => {
+    console.log ('przyszła zmiana komentarzy mejlowych');
+    try {
+        fs.writeFileSync("komentarzeM.json", JSON.stringify(request.body, null, 2));
+    } catch(err) {
+        return console.error(err);
+    }
+    console.log("komentarzeM.json został zapisany!");
+    res.end('{"status": "OK"}');
+    PostCode('/zapiszKomentarzeM', JSON.stringify(request.body, null, 2));
+})
+
 app.listen(port, (err) => {
     if (err) {
       return console.log('serwer RESTFul został zatrzymany', err)
